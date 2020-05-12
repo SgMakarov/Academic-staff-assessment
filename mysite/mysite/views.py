@@ -3,6 +3,7 @@ from django.shortcuts import redirect
 import requests
 class AuthView(View):
     def get(self, request, *args, **kwargs):
+        print(request.GET.get('code'))
         token = {
         "grant_type": "authorization_code",
         "code": request.GET.get('code'),

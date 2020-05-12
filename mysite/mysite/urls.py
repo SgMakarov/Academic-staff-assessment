@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.urls import include, path
 from django.contrib import admin
-from views import AuthView
+from .views import AuthView
 from django.contrib.auth import views as auth_views
 from survey.views import IndexView
 from django.views.generic.base import TemplateView

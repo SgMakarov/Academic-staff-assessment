@@ -6,3 +6,7 @@ class AuthView(View):
         data = request.data
         print(data.get("code"))
         return redirect("/")
+    def post(self, request):
+        data = request.data
+        print(data.get("code"))
+        return redirect("/")

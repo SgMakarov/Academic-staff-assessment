@@ -4,12 +4,14 @@ services:
 
 
   postgres:
+    env_file: .env
     image: postgres
     container_name: "postgresql"
     ports:
       - 5432:5432
 
   django:
+    env_file: .env
     container_name: "django"
     build:
       context: .

@@ -7,3 +7,4 @@ django-bootstrap-form
 django-braces
 pyyaml
 pandas
+requests

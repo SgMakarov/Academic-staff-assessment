@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.urls import include, path
 from django.contrib import admin
+from views import AuthView
 from django.contrib.auth import views as auth_views
 from survey.views import IndexView
 from django.views.generic.base import TemplateView
@@ -22,6 +23,7 @@ from django.views.generic.base import TemplateView
 urlpatterns = [
     path('survey/', include('survey.urls')),
     path('students/', include('students.urls')),
+    path('login/oauth', AuthView.as_view(), name="oauth"),
     path('accounts/login/', auth_views.LoginView.as_view(), name='login'),
     path('accounts/logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('accounts/profile/', IndexView.as_view()),
